@@ -17,7 +17,7 @@ trait Notifications
 
         $notificationBuilder = new PayloadNotificationBuilder('New event for '.$parent->name);
         $notificationBuilder->setBody($data["text"])
-            ->setSound('default');
+            ->setSound('default')->setClickAction("FCM_PLUGIN_ACTIVITY");
 
         $dataBuilder = new PayloadDataBuilder();
         $dataBuilder->addData($data);
